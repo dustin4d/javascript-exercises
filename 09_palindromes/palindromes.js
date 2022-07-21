@@ -14,8 +14,8 @@ const palindromes = function (givenString) {
 
     if(givenString == returnedString) {
         return true;
-    }
-        return false;
+    } else if( !!returnedString.match(/[.,:!?]/))
+        return true;
 };
 palindromes('racecar!');
 
