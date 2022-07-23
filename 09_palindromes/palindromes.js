@@ -1,23 +1,18 @@
-const palindromes = function (givenString) {
-    /* Save string as a variable, then .split() all it's characters into 
-    an array. Then, reverse the order of the arrayed string. After this,
-    .join() the array back together as the reversed string. Save that to 
-    a variable. Lastly, compare the givenString to the reversed word, and 
-    if it returns true, then the word is a palindrome. */
+const palindromes = function (str) {
+    let regex = /[^A-Za-z0-9]/g;
+    str = str.toLowerCase().replace(regex, '');
 
-    let arrayed = givenString.split("");
-    let reversed = arrayed.reverse();
-    let joined = reversed.join("");
-    let returnedString = joined.toString();
-
-    console.log(`joined = ${joined}. givenString = ${givenString}`);
-
-    if(givenString == returnedString) {
-        return true;
-    } else if( !!returnedString.match(/[.,:!?]/))
-        return true;
+    for(let i = 0; i < str.length/2; i++) {
+        if (str[i] !== str[length - 1 - i]) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+   
 };
-palindromes('racecar!');
+
+
 
 // Do not edit below this line
 module.exports = palindromes;
