@@ -4,16 +4,22 @@ const fibonacci = function(num) {
     let next;
     let seq = [];
 
+
+    // if fibonacci(num) is a negative number, return false
+    if(num < 0) {
+        return "OOPS";
+    }
+    // initialize the array with 0 and 1
+    seq.push(num1, num2);
+
     for(let i = 0; i <= num; i++) {
         next = num1 + num2;
         num1 = num2;
         num2 = next;
-        seq.push(num1);
+        seq.push(next);
     }
-    console.log(seq);
     return seq[num];
 };
 
-fibonacci(4);
 // Do not edit below this line
 module.exports = fibonacci;
