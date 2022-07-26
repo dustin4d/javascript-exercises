@@ -1,8 +1,10 @@
 const findTheOldest = function(array) {
-        for(let i = 0; i < array.length; i++) {
-            console.log(array[i].yearOfDeath - array[i].yearOfBirth);
-        }
-    }
+  for(let i = 0; i < array.length; i++) {
+    console.log(array[i].yearOfDeath - yearOfBirth);
+  }
+  }
+
+  /*people array goes here so I don't have to import it from test file. */
 
     const people = [
       {
